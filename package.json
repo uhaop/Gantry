@@ -1,0 +1,73 @@
+{
+  "name": "gantry",
+  "version": "1.0.0",
+  "description": "Gantry — local multi-platform bridge for Cursor and Windsurf IDE control via Telegram, Discord, Email, Feishu, and HTTP API.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "lint": "eslint . --ext .ts",
+    "typecheck": "tsc --noEmit",
+    "verify": "npm run lint && npm run typecheck && npm run build",
+    "scan:secrets": "tsx scripts/secret-scan.ts",
+    "verify:release": "npm run verify && npm run scan:secrets"
+  },
+  "keywords": [
+    "gantry",
+    "cursor",
+    "windsurf",
+    "ide",
+    "headless",
+    "cdp",
+    "telegram",
+    "discord",
+    "automation",
+    "bridge",
+    "chrome-devtools-protocol"
+  ],
+  "author": "Grasp Visual",
+  "license": "AGPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uhaop/Gantry.git"
+  },
+  "homepage": "https://graspvisual.com/gantry",
+  "bugs": {
+    "url": "https://github.com/uhaop/Gantry/issues"
+  },
+  "overrides": {
+    "undici": "^6.23.0"
+  },
+  "type": "commonjs",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "chrome-remote-interface": "^0.34.0",
+    "discord.js": "^14.25.1",
+    "dotenv": "^17.3.1",
+    "grammy": "^1.41.1",
+    "imapflow": "^1.2.12",
+    "mailparser": "^3.9.3",
+    "mime-types": "^3.0.2",
+    "nodemailer": "^8.0.1",
+    "pino": "^10.3.1",
+    "pino-pretty": "^13.1.3",
+    "sharp": "^0.34.5",
+    "tesseract.js": "^7.0.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/chrome-remote-interface": "^0.33.0",
+    "@types/mailparser": "^3.4.6",
+    "@types/mime-types": "^3.0.1",
+    "@types/node": "^25.3.5",
+    "@types/nodemailer": "^7.0.11",
+    "@typescript-eslint/eslint-plugin": "^8.56.1",
+    "@typescript-eslint/parser": "^8.56.1",
+    "eslint": "^10.0.3",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}

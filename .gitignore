@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.cursor.example
+!.env.windsurf.example
+!.env.vscode.example
+tmp/
+temp/
+*.tmp
+*.log
+logs/
+artifacts/
+.cursor/
+coverage/
+.DS_Store
+Thumbs.db
