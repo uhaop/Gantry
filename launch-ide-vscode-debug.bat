@@ -1,0 +1,3 @@
+@echo off
+echo Launching VScode with remote debugging on port 9224...
+"%LOCALAPPDATA%\Programs\Microsoft VS Code\Code.exe" --remote-debugging-port=9224

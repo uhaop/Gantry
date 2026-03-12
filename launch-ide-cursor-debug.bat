@@ -1,0 +1,3 @@
+@echo off
+echo Launching Cursor with remote debugging on port 9222...
+"%LOCALAPPDATA%\Programs\cursor\Cursor.exe" --remote-debugging-port=9222

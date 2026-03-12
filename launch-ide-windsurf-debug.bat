@@ -1,0 +1,3 @@
+@echo off
+echo Launching Windsurf with remote debugging on port 9223...
+"%LOCALAPPDATA%\Programs\Windsurf\Windsurf.exe" --remote-debugging-port=9223 --remote-allow-origins=*
