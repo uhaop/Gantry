@@ -16,6 +16,14 @@ Open-source headless IDE bridge with self-healing diagnostics.
 
 ---
 
+## Release Channel
+
+- Current channel: **`v0.x` preview** (`0.1.0`)
+- Stability target: production-minded local usage with best-effort IDE automation and evolving adapter coverage
+- Semver policy: breaking changes may occur until `v1.0.0`
+
+---
+
 ## Why Gantry?
 
 - **Work from anywhere** — Send prompts to Cursor, Windsurf, or VS Code from Telegram on your phone, Discord on your tablet, or a cURL script in CI. No VNC, no RDP, no screen sharing.
@@ -48,7 +56,7 @@ Open-source headless IDE bridge with self-healing diagnostics.
         │  (default)  │    │     │ (Cursor only)│
         └──────┬──────┘    │     └──────┬───────┘
                │           │            │
-      ┌────────▼────────┬──▼─────────┐  │
+      ┌────────▼───────────▼─────────┐  │
       │ Cursor/Windsurf/VS Code CDP  │  │
       │          clients             │  │
       └────────┬──────────┬──────────┘  │
@@ -65,7 +73,7 @@ Gantry connects to your IDE via **Chrome DevTools Protocol** (the same protocol 
 
 ## Features
 
-> **Work in progress**
+> **Preview release (`v0.x`)**
 > - Currently Telegram is the most fleshed-out platform with the most features implemented.
 > - Must run IDEs with `--remote-debugging-port` flag to enable bridge connection.
 > - Remote connection should still be your backup to review the IDE state, questions, plans not always detected.
@@ -439,8 +447,9 @@ Set `BRIDGE_BACKEND_MODE=api` in `.env` for API mode (Cursor only).
 | `npm run lint` | ESLint check |
 | `npm run typecheck` | TypeScript type check (no emit) |
 | `npm run verify` | Lint + typecheck + build |
+| `npm run test:smoke` | Fast smoke checks for core guardrails + local state persistence |
 | `npm run scan:secrets` | Scan tracked files for high-risk secret/PII patterns |
-| `npm run verify:release` | Release gate: verify + secret scan |
+| `npm run verify:release` | Release gate: verify + smoke + secret scan |
 
 **Diagnostics:**
 - `npx tsx scripts/cdp-preflight.ts` — CDP connectivity + selector health check

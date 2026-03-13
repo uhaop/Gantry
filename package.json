@@ -1,6 +1,6 @@
 {
   "name": "gantry",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Gantry — local multi-platform bridge for Cursor and Windsurf IDE control via Telegram, Discord, Email, Feishu, and HTTP API.",
   "main": "dist/index.js",
   "scripts": {
@@ -10,8 +10,9 @@
     "lint": "eslint . --ext .ts",
     "typecheck": "tsc --noEmit",
     "verify": "npm run lint && npm run typecheck && npm run build",
+    "test:smoke": "tsx src/smoke/smoke.ts",
     "scan:secrets": "tsx scripts/secret-scan.ts",
-    "verify:release": "npm run verify && npm run scan:secrets"
+    "verify:release": "npm run verify && npm run test:smoke && npm run scan:secrets"
   },
   "keywords": [
     "gantry",
