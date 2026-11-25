@@ -7,6 +7,8 @@
 Control Cursor, Windsurf, and VS Code from your phone, your team's Discord, email, or any HTTP client.
 Open-source headless IDE bridge with self-healing diagnostics.
 
+> **Project status: Archived.** Gantry was an open-source preview for controlling AI coding assistants through Telegram, Discord, and HTTP. I retired it after moving my day-to-day mobile workflows to Cursor, Grok, and Rakaza. The desktop integrations were last verified against older IDE builds. Compatibility with current releases is unverified. The source remains available under the MIT license.
+
 [![Node.js](https://img.shields.io/badge/Node.js-%3E%3D20-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
